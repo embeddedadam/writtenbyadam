@@ -1,5 +1,6 @@
 import CalMe from "@/components/cal";
 import SendEmail from "@/components/sendEmail";
+import StripeCheckout from "@/components/stripeCheckout";
 import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
 
 const Contact = () => {
@@ -43,7 +44,12 @@ const Contact = () => {
 
           <SendEmail />
           <div className="flex justify-center my-4">or</div>
-          <CalMe />
+          <div>
+            <StripeCheckout />
+          </div>
+          <div>
+            <CalMe />
+          </div>
         </div>
       </main>
     </div>
