@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import axios from "axios";
 import { loadStripe } from "@stripe/stripe-js";
 import { getCalApi } from "@calcom/embed-react";
@@ -13,6 +13,7 @@ const stripePromise = loadStripe(stripePublicKey);
 
 const BookConsultation: React.FC = () => {
   const [paymentSuccess, setPaymentSuccess] = useState(false);
+  const scheduleButtonRef = useRef<HTMLButtonElement>(null);
 
   const handleCheckout = async () => {
     const stripe = await stripePromise;
@@ -41,6 +42,7 @@ const BookConsultation: React.FC = () => {
         .then((response) => {
           if (response.data.success) {
             setPaymentSuccess(true);
+            scheduleButtonRef.current?.click();
           }
         })
         .catch((error) => {
@@ -74,6 +76,7 @@ const BookConsultation: React.FC = () => {
         </button>
       ) : (
         <button
+          ref={scheduleButtonRef}
           className="flex items-center relative px-4 py-2 mt-4 font-semibold text-white bg-black rounded hover:bg-gray-800 dark:hover:bg-gray-600"
           data-cal-namespace=""
           data-cal-link="adam-gałecki/consultation-call"
