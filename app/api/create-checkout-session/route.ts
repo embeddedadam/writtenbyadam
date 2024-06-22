@@ -22,8 +22,8 @@ export async function GET(req: NextApiRequest, res: NextApiResponse) {
           },
         ],
         mode: "payment",
-        success_url: "http://localhost:3000/",
-        cancel_url: "http://localhost:3000/",
+        success_url: `http://localhost:3000/contact?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `http://localhost:3000/contact?payment=failed`,
       });
 
       return new NextResponse(JSON.stringify({ url: session.url }));

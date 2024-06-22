@@ -1,6 +1,5 @@
-import CalMe from "@/components/cal";
+import BookConsultation from "@/components/consultation";
 import SendEmail from "@/components/sendEmail";
-import StripeCheckout from "@/components/stripeCheckout";
 import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
 
 const Contact = () => {
@@ -20,7 +19,7 @@ const Contact = () => {
               href="https://github.com/embeddedadam/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
+              className="text-black dark:text-dark hover:text-gray-700 dark:hover:text-gray-300"
             >
               <FaGithub size={40} />
             </a>
@@ -28,7 +27,7 @@ const Contact = () => {
               href="https://www.linkedin.com/in/adam-galecki"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
+              className="text-black dark:text-dark hover:text-gray-700 dark:hover:text-gray-300"
             >
               <FaLinkedin size={40} />
             </a>
@@ -36,7 +35,7 @@ const Contact = () => {
               href="https://x.com/pon_o_"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
+              className="text-black dark:text-dark hover:text-gray-700 dark:hover:text-gray-300"
             >
               <FaTwitterSquare size={40} />
             </a>
@@ -45,10 +44,7 @@ const Contact = () => {
           <SendEmail />
           <div className="flex justify-center my-4">or</div>
           <div>
-            <StripeCheckout />
-          </div>
-          <div>
-            <CalMe />
+            <BookConsultation />
           </div>
         </div>
       </main>
