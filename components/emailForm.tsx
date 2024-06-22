@@ -11,7 +11,7 @@ const EmailForm = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("/api/subscribe", { email });
+      const response = await axios.post("/api/mailchimp", { email });
       if (response.data.status === "success") {
         setMessage("Thank you for subscribing!");
         setEmail("");
@@ -19,7 +19,7 @@ const EmailForm = () => {
         setMessage(response.data.message);
       }
     } catch (error) {
-      console.error(error);
+      console.error("Error:", error);
       setMessage("Subscription failed. Please try again.");
     }
   };
