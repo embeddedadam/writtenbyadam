@@ -2,14 +2,16 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { NextResponse } from "next/server";
 import Stripe from "stripe";
 
-export const stripe = new Stripe(process.env.STRIPE_API_KEY!, {
-  apiVersion: "2023-10-16",
-  typescript: true,
-});
+export const stripe = new Stripe(
+  "sk_test_51OP2yZIZE7h0g1gjJmwwVyVT5GGHXYiz7rIS0ccqClGgmxpvI4tsqzUsK7BcpGwIf9dXa0M9798YEyLPvZtcxwPA00VasjacTk",
+  {
+    apiVersion: "2023-10-16",
+    typescript: true,
+  },
+);
 
-export default async function POST(req: NextApiRequest, res: NextApiResponse) {
-  console.log(req);
-  if (req.method === "POST") {
+export async function GET(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === "GET") {
     try {
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
@@ -30,7 +32,8 @@ export default async function POST(req: NextApiRequest, res: NextApiResponse) {
       return new NextResponse("Internal Error", { status: 500 });
     }
   } else {
-    res.setHeader("Allow", "POST");
+    console.error(req.method);
+    res.setHeader("Allow", "GET");
     res.status(405).end("Method Not Allowed");
   }
 }

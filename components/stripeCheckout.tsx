@@ -6,7 +6,6 @@ import { loadStripe } from "@stripe/stripe-js";
 
 const stripePublicKey =
   "pk_test_51OP2yZIZE7h0g1gjllG9ne14f1tvoKu3pzEdboIUsLtfOSFAho70Wqr7xmrT7ENJ2Vybi2f1R0xMfyqq4xWse9IT00l2ygiOVt";
-
 const stripePromise = loadStripe(stripePublicKey);
 
 const StripeCheckout: React.FC = () => {
@@ -19,24 +18,10 @@ const StripeCheckout: React.FC = () => {
     }
 
     try {
-      const response = await axios.post(
-        "/api/create-checkout-session",
-        {
-          priceId: "price_1PSdUcIZE7h0g1gjj9jF279U", // Pass any additional data if needed
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        },
-      );
+      const response = await axios.get("/api/create-checkout-session");
 
-      const { sessionId } = response.data;
-      const { error } = await stripe.redirectToCheckout({ sessionId });
-
-      if (error) {
-        console.error("Error:", error);
-      }
+      const { url } = response.data;
+      window.location.href = url;
     } catch (error) {
       console.error("Error creating checkout session:", error);
     }
