@@ -43,7 +43,7 @@ const Contact = () => {
 
           <SendEmail />
           <div className="flex justify-center my-4">or</div>
-            <CalMe />
+          <CalMe />
         </div>
       </main>
     </div>
