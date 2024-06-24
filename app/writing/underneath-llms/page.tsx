@@ -18,19 +18,20 @@ const Page: React.FC = () => {
   return (
     <div className="container max-w-3xl py-6 lg:py-10 mx-auto">
       <Heading title="Understanding Large Language Models (LLMs)" />
-      <p>
+      <p className="mb-4">
         I thought that when talking about AI we should have a basic
         understanding of it rather than thinking that we can prompt and get text
         information about something and not care what is happening in the black
-        box.
+        box. It is not going to be math backed up, but rather a high-level
+        overview on what is happening during the usage of LLMs.
       </p>
-      <p>In this article, we will:</p>
+      <p className="mb-4">In this article, we will:</p>
       <ol className="list-decimal list-inside mb-4 ml-4">
         <li>Get a high-level overview of how LLMs and ChatGPT are working</li>
         <li>Go through a basic C implementation of how LLMs are built</li>
         <li>Discuss how things will progress further</li>
       </ol>
-      <p>
+      <p className="mb-4">
         One thing that all of the chat-based companies did pretty intelligently
         was to convince people these chats can reason very well on their own, at
         least it feels like this. In reality, this is a piece of software glued
