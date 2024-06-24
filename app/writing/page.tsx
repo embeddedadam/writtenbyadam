@@ -37,7 +37,7 @@ export default function Page() {
                   1. Underneath Large Language Models (LLMs)
                 </a>
               </Link>
-              <Link href="/writing/how-cars-are-talking" legacyBehavior>
+              {/* <Link href="/writing/how-cars-are-talking" legacyBehavior>
                 <a className="block text-black dark:text-black hover:text-gray-700 dark:hover:text-gray-300">
                   2. How cars are talking
                 </a>
@@ -54,7 +54,7 @@ export default function Page() {
                 <a className="block text-black dark:text-black hover:text-gray-700 dark:hover:text-gray-300">
                   4. Why challenges are worth it
                 </a>
-              </Link>
+              </Link> */}
             </div>
           </div>
         </div>
