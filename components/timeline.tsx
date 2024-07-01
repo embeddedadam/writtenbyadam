@@ -82,7 +82,7 @@ const CustomizedTimeline = () => {
                 initial="hidden"
                 animate={controls}
                 variants={createVariants("left")}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
               >
                 <GiRobotGrab color="white" />
               </motion.div>
@@ -94,7 +94,7 @@ const CustomizedTimeline = () => {
               initial="hidden"
               animate={controls}
               variants={createVariants("left")}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Typography variant="h6" component="span" color="text.primary">
                 Graduated in Robotics
@@ -127,7 +127,7 @@ const CustomizedTimeline = () => {
                 initial="hidden"
                 animate={controls}
                 variants={createVariants("right")}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
               >
                 <FaCodeBranch color="white" />
               </motion.div>
@@ -139,7 +139,7 @@ const CustomizedTimeline = () => {
               initial="hidden"
               animate={controls}
               variants={createVariants("right")}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Typography variant="h6" component="span" color="text.primary">
                 Software Engineering Work
@@ -184,7 +184,7 @@ const CustomizedTimeline = () => {
                 initial="hidden"
                 animate={controls}
                 variants={createVariants("left")}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
               >
                 <MdFoundation color="black" />
               </motion.div>
@@ -196,7 +196,7 @@ const CustomizedTimeline = () => {
               initial="hidden"
               animate={controls}
               variants={createVariants("left")}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Typography variant="h6" component="span" color="text.primary">
                 Founding Braincast
@@ -217,7 +217,7 @@ const CustomizedTimeline = () => {
                 initial="hidden"
                 animate={controls}
                 variants={createVariants("left")}
-                transition={{ duration: 0.5, delay: 0.2 }}
+                transition={{ duration: 0.5, delay: 0.1 }}
               >
                 <VscDebugContinue color="white" />
               </motion.div>
@@ -229,7 +229,7 @@ const CustomizedTimeline = () => {
               initial="hidden"
               animate={controls}
               variants={createVariants("left")}
-              transition={{ duration: 0.5, delay: 0.4 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
             >
               <Typography variant="h6" component="span" color="text.primary">
                 Future challenges

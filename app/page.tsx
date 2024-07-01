@@ -33,18 +33,11 @@ export default function Home() {
         <div className="max-w-3xl w-full">
           <section className="mb-8">
             <p className="leading-relaxed">
-              I&#39;m Adam Gałecki, software engineer with a background in
-              robotics. Over the years I have written code for security systems,
-              electric cars, smart devices, and websites. Currently, I am the
-              founder of Braincast, leveraging generative AI to enhance learning
-              experiences.
-            </p>
-          </section>
-          <section className="mb-12">
-            <p className="leading-relaxed">
+              I&#39;m Adam Gałecki, software engineer and founder. Over the
+              years I have written code for security systems, electric cars,
+              smart devices, and websites. Currently, I am building Braincast,
+              platofrm that helps people learn faster information from the web.
               I write about technology, entrepreneurship, and personal growth.
-              My goal is to share knowledge and inspire others to create
-              meaningful work.
             </p>
           </section>
           <div className="mb-16">

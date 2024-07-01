@@ -11,7 +11,7 @@ const Page: React.FC = () => {
     },
     {
       description: "Series of videos by Andrej Karpathy on YouTube",
-      link: "https://www.youtube.com/user/karpathy",
+      link: "https://www.youtube.com/@AndrejKarpathy",
     },
   ];
 
@@ -67,22 +67,22 @@ const Page: React.FC = () => {
       <div className="mt-6"></div>
       <h2 className="text-2xl font-bold mb-2">Large Language Models</h2>
       <hr className="border-gray-400 w-full mb-4" />
-      <p>
+      <p className="mb-4">
         These models are directly correlated with ML in text, all sorts of text.
-        We will unwrap it later.
+        Let's unwrap it.
       </p>
       <p>
         What if ML would work only on text? How to make it work? Well, the
         answer is not that complicated.
       </p>
-      <p>
+      <p className="mb-4">
         Based on the current words we can try to classify what word will come
         next in a text, which actually to some extent makes it easier for us
         because the full text is a self-validating algorithm. Based on which
         word was produced we can loop that into the training set once again and
         iterate. But how to train data based on text in our algorithms?
       </p>
-      <p>
+      <p className="mb-4">
         For that, we have the help of tokenization and text embedding, which are
         NLP techniques that can store text in matrices of numbers. How?
       </p>
@@ -95,7 +95,7 @@ const Page: React.FC = () => {
       <div className="mt-6"></div>
       <h3 className="text-xl font-bold mb-2">Tokenization:</h3>
       <hr className="border-gray-400 w-full mb-4" />
-      <ul className="list-disc list-inside mb-4 ml-4">
+      <ul className="mb-4 ml-4">
         <li>
           <strong>Subword Tokenization:</strong> Text is split into smaller
           units like words, subwords, or characters using algorithms like Byte
@@ -113,7 +113,7 @@ const Page: React.FC = () => {
       <div className="mt-6"></div>
       <h3 className="text-xl font-bold mb-2">Embedding Layer:</h3>
       <hr className="border-gray-400 w-full mb-4" />
-      <ul className="list-disc list-inside mb-4 ml-4">
+      <ul className="mb-4 ml-4">
         <li>
           <strong>Initialization:</strong> Each token is mapped to a unique
           vector (embedding) from a learned embedding matrix. This matrix is
@@ -128,7 +128,7 @@ const Page: React.FC = () => {
       <div className="mt-6"></div>
       <h3 className="text-xl font-bold mb-2">Embedding Matrix:</h3>
       <hr className="border-gray-400 w-full mb-4" />
-      <ul className="list-disc list-inside mb-4 ml-4">
+      <ul className="mb-4 ml-4">
         <li>
           <strong>Structure:</strong> A large matrix where each row corresponds
           to the embedding of a unique token from the vocabulary.
@@ -142,7 +142,7 @@ const Page: React.FC = () => {
       <div className="mt-6"></div>
       <h3 className="text-xl font-bold mb-2">Conversion Process:</h3>
       <hr className="border-gray-400 w-full mb-4" />
-      <ul className="list-disc list-inside mb-4 ml-4">
+      <ul className="mb-4 ml-4">
         <li>
           <strong>Lookup:</strong> For a given input text, each token is
           converted to its corresponding vector by looking up the embedding
@@ -160,7 +160,7 @@ const Page: React.FC = () => {
         Positional Encoding (for models like Transformers):
       </h3>
       <hr className="border-gray-400 w-full mb-4" />
-      <ul className="list-disc list-inside mb-4 ml-4">
+      <ul className="mb-4 ml-4">
         <li>
           <strong>Addition:</strong> Since embeddings alone do not capture word
           order, positional encodings are added to the token embeddings to
@@ -176,7 +176,7 @@ const Page: React.FC = () => {
       <h2 className="text-2xl font-bold mb-2">Example</h2>
       <hr className="border-gray-400 w-full mb-4" />
       <p>For the sentence &quot;Machine learning is great&quot;:</p>
-      <ul className="list-disc list-inside mb-4 ml-4">
+      <ul className="mb-4 ml-4">
         <li>
           <strong>Tokenization:</strong> Tokens: [&quot;Machine&quot;,
           &quot;learning&quot;, &quot;is&quot;, &quot;great&quot;]
@@ -185,7 +185,7 @@ const Page: React.FC = () => {
           <strong>Embedding Lookup:</strong>
           <br />
           <div className="flex justify-center">
-            <pre>
+            <pre className="mb-4">
               {`Machine -> [0.1, 0.2, ..., 0.8]
 learning -> [0.3, 0.7, ..., 0.6]
 is -> [0.4, 0.5, ..., 0.9]
@@ -202,14 +202,14 @@ great -> [0.6, 0.1, ..., 0.4]`}
           </div>
         </li>
       </ul>
-      <p>
+      <p className="mb-4">
         How are they able to train models on such an enormous amount of data
         found on the whole internet?
       </p>
-      <p>
+      <p className="mb-4">
         The answer is straightforward. Neural Networks and GPUs, a lot of GPUs.
       </p>
-      <p>
+      <p className="mb-4">
         A GPU is basically a processing unit designed for high computation,
         which is why your computer relies on it when you play extremely
         realistic video games. Every pixel needs to be calculated, and GPUs are
@@ -232,7 +232,7 @@ great -> [0.6, 0.1, ..., 0.4]`}
         these tech companies needed to raise such an enormous amount of money to
         create their own models.
       </p>
-      <p>
+      <p className="mb-4">
         Their fundamental structure is quite straightforward. They comprise a
         series of interconnected &quot;neurons&quot; arranged in layers, through
         which an input signal travels to predict the outcome variable.
@@ -240,11 +240,11 @@ great -> [0.6, 0.1, ..., 0.4]`}
         together, with non-linearities introduced between the layers, enabling
         the neural network to capture complex, non-linear relationships.
       </p>
-      <p>
+      <p className="mb-4">
         Neural networks are often many layers deep (hence the name Deep
         Learning), which means they can be extremely large.
       </p>
-      <p>
+      <p className="mb-4">
         If you are smart, you are now able to see why LLMs are named
         &quot;large&quot;. It is simply due to neural networks with the amount
         of data being trained on and the number of &quot;neurons&quot; in the

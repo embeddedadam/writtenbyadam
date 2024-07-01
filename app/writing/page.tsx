@@ -32,11 +32,11 @@ export default function Page() {
             <h1 className="text-2xl">Articles</h1>
             <hr className="border-gray-400 w-full" />
             <div className="text-left space-y-4 w-full">
-              <Link href="/writing/underneath-llms" legacyBehavior>
+              {/* <Link href="/writing/underneath-llms" legacyBehavior>
                 <a className="block text-black dark:text-black hover:text-gray-700 dark:hover:text-gray-300">
                   1. Underneath Large Language Models (LLMs)
                 </a>
-              </Link>
+              </Link> */}
               {/* <Link href="/writing/how-cars-are-talking" legacyBehavior>
                 <a className="block text-black dark:text-black hover:text-gray-700 dark:hover:text-gray-300">
                   2. How cars are talking

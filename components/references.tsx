@@ -16,7 +16,12 @@ const References: React.FC<ReferencesProps> = ({ sources }) => {
       <ul className="list-disc list-inside mb-4">
         {sources.map((source, index) => (
           <li key={index}>
-            <a href={source.link} target="_blank" rel="noopener noreferrer">
+            <a
+              href={source.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-700 dark:hover:text-gray-300"
+            >
               {source.description}
             </a>
           </li>
