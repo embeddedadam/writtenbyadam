@@ -1,5 +1,5 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
+
 import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -7,7 +7,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   typescript: true,
 });
 
-export async function POST(req: Request, res: NextApiResponse) {
+export async function POST(req: NextRequest, res: NextResponse) {
   if (req.method === "POST") {
     try {
       const body = await req.json();
@@ -28,7 +28,7 @@ export async function POST(req: Request, res: NextApiResponse) {
           status: 400,
         });
       }
-    } catch (error) {
+    } catch (error: any) {
       console.error("[STRIPE_VERIFY_ERROR]", error);
       return new NextResponse(
         JSON.stringify({ success: false, error: error.message }),
@@ -36,7 +36,10 @@ export async function POST(req: Request, res: NextApiResponse) {
       );
     }
   } else {
-    res.setHeader("Allow", "POST");
-    return new NextResponse("Method Not Allowed", { status: 405 });
+    console.error(req.method);
+    return NextResponse.json(
+      { message: "Method Not Allowed" },
+      { status: 405 },
+    );
   }
 }

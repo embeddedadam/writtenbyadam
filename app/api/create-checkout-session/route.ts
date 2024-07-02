@@ -1,5 +1,4 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import Stripe from "stripe";
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
@@ -7,7 +6,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
   typescript: true,
 });
 
-export async function GET(req: NextApiRequest, res: NextApiResponse) {
+export async function GET(req: NextRequest, res: NextResponse) {
   if (req.method === "GET") {
     try {
       const session = await stripe.checkout.sessions.create({
@@ -30,7 +29,9 @@ export async function GET(req: NextApiRequest, res: NextApiResponse) {
     }
   } else {
     console.error(req.method);
-    res.setHeader("Allow", "GET");
-    res.status(405).end("Method Not Allowed");
+    return NextResponse.json(
+      { message: "Method Not Allowed" },
+      { status: 405 },
+    );
   }
 }

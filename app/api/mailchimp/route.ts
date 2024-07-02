@@ -1,5 +1,4 @@
-import { NextApiResponse } from "next";
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import mailchimp from "@mailchimp/mailchimp_marketing";
 
 mailchimp.setConfig({
@@ -7,7 +6,7 @@ mailchimp.setConfig({
   server: process.env.MAILCHIMP_SERVER_PREFIX,
 });
 
-export async function POST(req, res: NextApiResponse) {
+export async function POST(req: NextRequest, res: NextResponse) {
   if (req.method !== "POST") {
     return new NextResponse(
       JSON.stringify({ status: "error", message: "Method Not Allowed" }),
@@ -26,8 +25,16 @@ export async function POST(req, res: NextApiResponse) {
       );
     }
 
+    const listId = process.env.MAILCHIMP_LIST_ID;
+    if (!listId) {
+      return NextResponse.json(
+        { status: "error", message: "Mailchimp List ID is not configured" },
+        { status: 500 },
+      );
+    }
+
     try {
-      await mailchimp.lists.addListMember(process.env.MAILCHIMP_LIST_ID, {
+      await mailchimp.lists.addListMember(listId, {
         email_address: email,
         status: "subscribed",
       });
@@ -38,7 +45,7 @@ export async function POST(req, res: NextApiResponse) {
         }),
         { status: 200 },
       );
-    } catch (error) {
+    } catch (error: any) {
       console.error(
         "Error subscribing user:",
         error.response ? error.response.body : error,
