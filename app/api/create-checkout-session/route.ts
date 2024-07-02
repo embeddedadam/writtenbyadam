@@ -8,6 +8,11 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!, {
 
 export async function GET(req: NextRequest, res: NextResponse) {
   if (req.method === "GET") {
+    const baseUrl =
+      process.env.NODE_ENV === "production"
+        ? "https://www.writtenbyadam.com"
+        : "http://localhost:3000";
+
     try {
       const session = await stripe.checkout.sessions.create({
         payment_method_types: ["card"],
@@ -18,8 +23,8 @@ export async function GET(req: NextRequest, res: NextResponse) {
           },
         ],
         mode: "payment",
-        success_url: `http://localhost:3000/contact?session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `http://localhost:3000/contact?payment=failed`,
+        success_url: `${baseUrl}/contact?session_id={CHECKOUT_SESSION_ID}`,
+        cancel_url: `${baseUrl}/contact?payment=failed`,
       });
 
       return new NextResponse(JSON.stringify({ url: session.url }));
