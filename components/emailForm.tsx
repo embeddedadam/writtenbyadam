@@ -26,7 +26,7 @@ const EmailForm = () => {
 
   return (
     <div className="text-center bg-white p-6 shadow-md rounded-lg text-black mt-8">
-      <h2 className="text-2xl font-bold mb-4">Subscribe</h2>
+      <h2 className="text-2xl font-bold mb-4">Newsletter</h2>
       <p className="mb-4">Subscribe to get the latest updates and articles.</p>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
