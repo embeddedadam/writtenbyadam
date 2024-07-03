@@ -21,7 +21,7 @@ import VolvoLogo from "../public/volvo.svg";
 import BMWLogo from "../public/bmw.svg";
 import Image from "next/image";
 
-const createVariants = (side) => ({
+const createVariants = (side: any) => ({
   hidden: { opacity: 0, x: side === "left" ? -200 : 200 },
   visible: { opacity: 1, x: 0 },
 });
