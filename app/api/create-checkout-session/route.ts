@@ -18,7 +18,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
         payment_method_types: ["card"],
         line_items: [
           {
-            price: "price_1PSdUcIZE7h0g1gjj9jF279U", // Replace with your price ID
+            price: "prod_QJFXAni0aPxyli",
             quantity: 1,
           },
         ],
