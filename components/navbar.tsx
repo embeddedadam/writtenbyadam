@@ -1,13 +1,11 @@
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
-import { FaTwitterSquare } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaTwitterSquare } from "react-icons/fa";
 import profilePicture from "../public/profilePicture.png";
 import Image from "next/image";
 
 const Navbar = () => {
   return (
-    <nav className="bg-black-900 mb-20 flex items-center justify-between py-6">
-      <div className="m-8 flex flex-shrink-0 items-center justify-center gap-4">
+    <nav className="bg-black-900 mb-20 flex items-center justify-between py-6 px-4 sm:px-8">
+      <div className="flex items-center gap-4">
         <a href="/" className="flex items-center gap-4">
           <Image src={profilePicture} alt="logo" className="h-8 w-8" />
           <span className="text-black dark:text-black hover:text-gray-700 dark:hover:text-gray-300">
@@ -28,7 +26,7 @@ const Navbar = () => {
           Contact
         </a>
       </div>
-      <div className="m-8 flex items-center justify-center gap-4 text-2xl">
+      <div className="flex items-center gap-4 text-2xl">
         <a
           href="https://github.com/embeddedadam/"
           target="_blank"
@@ -49,7 +47,7 @@ const Navbar = () => {
           href="https://x.com/pon_o_"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-black dark:text-vlack hover:text-gray-700 dark:hover:text-gray-300"
+          className="text-black dark:text-black hover:text-gray-700 dark:hover:text-gray-300"
         >
           <FaTwitterSquare />
         </a>

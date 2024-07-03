@@ -21,7 +21,7 @@ import VolvoLogo from "../public/volvo.svg";
 import BMWLogo from "../public/bmw.svg";
 import Image from "next/image";
 
-const createVariants = (side: any) => ({
+const createVariants = (side) => ({
   hidden: { opacity: 0, x: side === "left" ? -200 : 200 },
   visible: { opacity: 1, x: 0 },
 });
@@ -55,8 +55,6 @@ const CustomizedTimeline = () => {
           property="og:description"
           content="Explore the professional journey of Adam Gałecki, a software engineer specializing in robotics, generative AI, and embedded systems. Learn about his work experience, key milestones, and future aspirations."
         />
-        {/* <meta property="og:image" content="/path-to-image.jpg" />
-        <meta property="og:url" content="https://www.adamgalecki.com/timeline" /> */}
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Timeline position="alternate">
@@ -148,7 +146,7 @@ const CustomizedTimeline = () => {
                 Worked at Apator Telemetria, Carrier, Volvo, and BMW,
                 contributing to various software and embedded systems projects.
               </Typography>
-              <div className="flex justify-around items-center mt-2">
+              <div className="flex flex-wrap justify-around items-center mt-2">
                 <Image
                   src={ApatorLogo}
                   alt="Apator"

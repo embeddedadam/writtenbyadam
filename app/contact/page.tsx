@@ -24,8 +24,6 @@ const Contact = () => {
           property="og:description"
           content="Get in touch with Adam Gałecki via social media or email. Book a consultation to discuss technology, entrepreneurship, and personal growth."
         />
-        {/* <meta property="og:image" content="/path-to-image.jpg" />
-        <meta property="og:url" content="https://www.adamgalecki.com/contact" /> */}
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]"></div>
@@ -42,7 +40,7 @@ const Contact = () => {
               href="https://github.com/embeddedadam/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black dark:text-dark hover:text-gray-700 dark:hover:text-gray-300"
+              className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
             >
               <FaGithub size={40} />
             </a>
@@ -50,7 +48,7 @@ const Contact = () => {
               href="https://www.linkedin.com/in/adam-galecki"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black dark:text-dark hover:text-gray-700 dark:hover:text-gray-300"
+              className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
             >
               <FaLinkedin size={40} />
             </a>
@@ -58,7 +56,7 @@ const Contact = () => {
               href="https://x.com/pon_o_"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-black dark:text-dark hover:text-gray-700 dark:hover:text-gray-300"
+              className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300"
             >
               <FaTwitterSquare size={40} />
             </a>
