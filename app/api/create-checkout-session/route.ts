@@ -18,7 +18,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
         payment_method_types: ["card"],
         line_items: [
           {
-            price: "prod_QJFXAni0aPxyli",
+            price: "price_1PSd2GIZE7h0g1gja6tV5JtH",
             quantity: 1,
           },
         ],
