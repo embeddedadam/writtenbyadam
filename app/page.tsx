@@ -35,9 +35,10 @@ export default function Home() {
             <p className="leading-relaxed">
               I&#39;m Adam Gałecki, software engineer and founder. Over the
               years I have written code for security systems, electric cars,
-              smart devices, and websites. Currently, I am building Braincast,
-              platofrm that helps people learn faster information from the web.
-              I write about technology, entrepreneurship, and personal growth.
+              smart devices, and websites. Currently, I am building Braincast, a
+              platform designed to help people quickly learn information from
+              the web. I write about technology, entrepreneurship, and personal
+              growth.
             </p>
           </section>
           <div className="mb-16">
