@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Head from "next/head";
 import { FaArrowLeft } from "react-icons/fa";
 
 interface HeadingProps {
@@ -8,10 +9,10 @@ interface HeadingProps {
 
 const Heading: React.FC<HeadingProps> = ({ title }) => {
   return (
-    <div className="px-4 sm:px-6 lg:px-8">
+    <div>
       <div className="flex items-center mb-4">
         <Link href="/writing" legacyBehavior>
-          <a className="text-black dark:text-white hover:text-gray-700 dark:hover:text-gray-300">
+          <a className="text-black hover:text-gray-700 dark:hover:text-gray-300">
             <FaArrowLeft className="h-6 w-6" />
           </a>
         </Link>
