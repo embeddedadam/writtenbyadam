@@ -16,7 +16,7 @@ const Page: React.FC = () => {
       </Head>
       <Heading title="How Python Became a New C Language?" />
       <p className="mb-4">
-        If you are thinking what the hell, why is this guy comparing two
+        If you are thinking, what the hell, why is this guy comparing two
         different programming languages and paradigms? Then you have the right
         to ask that question.
       </p>
@@ -31,7 +31,7 @@ const Page: React.FC = () => {
       </p>
       <p className="mb-4">
         Back in the days of the first computers and microcontrollers, everything
-        was dictated by hardware architecture. Before C, we have written code in
+        was dictated by hardware architecture. Before C, we wrote code in
         assembly. What is even worse, every chip and every architecture had its
         own set of instructions that could be used while writing code. It wasn’t
         like today, you learn to code in one language and then can do
@@ -46,7 +46,7 @@ const Page: React.FC = () => {
         language.
       </p>
       <p className="mb-4">
-        With the invention of C in the early 1970s humans learned how to detach
+        With the invention of C in the early 1970s, humans learned how to detach
         themselves a bit from computer architecture. Keyword “a bit”. What I
         mean by that is that we learned how to write code and then use compilers
         to optimize it for specific hardware architecture, which over the
@@ -67,14 +67,14 @@ const Page: React.FC = () => {
       </p>
       <p>I bet you know this word is coming. Artificial intelligence.</p>
       <p className="mb-4">
-        Python over the last few years become the go-to tool for most
+        Python over the last few years become the go-to tool for most of the
         engineering work, not only in AI but overall. It has a relatively easy
         syntax and a low entry level in terms of skills. Infrastructure code is
         being written in Python, automated tests are being written in Python,
         the backend of the websites is being written in Python, robotics
         software is being written in Python, and desktop apps are being written
         in Python. The point of listing these is to show how popular it has
-        become already.
+        became already.
       </p>
       <p className="mb-4">
         The next shift has already started due to advancements in AI. If we go
@@ -124,8 +124,8 @@ const Page: React.FC = () => {
         After all I also have one more learning. In the same way as engineers
         back in the days could worry that compilers will make their knowledge
         obsolete, we can rethink if AI will make us obsolete. My answer to this
-        is obvouly no. It wil change how we write code and how much of it is
-        going to be produced. The role of software engineer will evlolve but we
+        is obviously no. It will change how we write code and how much of it is
+        going to be produced. The role of software engineer will evolve but we
         will not be replaced. We will be replaced by other humans using AI.
       </p>
     </div>
