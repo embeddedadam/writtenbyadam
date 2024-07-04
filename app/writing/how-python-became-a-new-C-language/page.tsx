@@ -72,7 +72,7 @@ const Page: React.FC = () => {
         syntax and a low entry level in terms of skills. Infrastructure code is
         being written in Python, automated tests are being written in Python,
         the backend of the websites is being written in Python, robotics
-        software is being written in Python, and Desktop apps are being written
+        software is being written in Python, and desktop apps are being written
         in Python. The point of listing these is to show how popular it has
         become already.
       </p>
