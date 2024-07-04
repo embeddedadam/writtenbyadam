@@ -31,8 +31,8 @@ export default function Home() {
         <div className="max-w-3xl w-full">
           <section className="mb-8 px-4 sm:px-6 lg:px-8">
             <p className="leading-relaxed text-center sm:text-left">
-              I&#39;m Adam Gałecki, software engineer and founder. Over the
-              years I have written code for security systems, electric cars,
+              I&apos;m Adam Gałecki, a software engineer and founder. Over the
+              years, I have written code for security systems, electric cars,
               smart devices, and websites. Currently, I am building Braincast, a
               platform designed to help people quickly learn information from
               the web. I write about technology, entrepreneurship, and personal
