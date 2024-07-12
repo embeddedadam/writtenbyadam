@@ -26,7 +26,7 @@ const Navbar = () => {
           Contact
         </a>
       </div>
-      <div className="flex items-center gap-4 text-2xl">
+      <div className="hidden sm:flex items-center gap-4 text-2xl">
         <a
           href="https://github.com/embeddedadam/"
           target="_blank"

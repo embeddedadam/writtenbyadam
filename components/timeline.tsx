@@ -57,186 +57,193 @@ const CustomizedTimeline = () => {
         />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Timeline position="alternate">
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0", color: "text.primary" }}
-            align="right"
-            variant="body2"
-          >
-            <motion.div
-              initial="hidden"
-              animate={controls}
-              variants={createVariants("right")}
-              transition={{ duration: 0.5 }}
+      <div className="overflow-x-auto">
+        <Timeline position="alternate" className="flex flex-nowrap">
+          <TimelineItem className="flex-shrink-0 min-w-[350px]">
+            <TimelineOppositeContent
+              sx={{ m: "auto 0", color: "text.primary" }}
+              align="right"
+              variant="body2"
             >
-              Jan 2020
-            </motion.div>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector sx={{ bgcolor: "black" }} />
-            <TimelineDot sx={{ bgcolor: "black" }}>
-              <motion.div
-                initial="hidden"
-                animate={controls}
-                variants={createVariants("left")}
-                transition={{ duration: 0.5, delay: 0.1 }}
-              >
-                <GiRobotGrab color="white" />
-              </motion.div>
-            </TimelineDot>
-            <TimelineConnector sx={{ bgcolor: "black" }} />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }}>
-            <motion.div
-              initial="hidden"
-              animate={controls}
-              variants={createVariants("left")}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <Typography variant="h6" component="span" color="text.primary">
-                Graduated in Robotics
-              </Typography>
-              <Typography color="text.secondary">
-                Graduated with a specialization in Robotics and Mechatronics.
-              </Typography>
-            </motion.div>
-          </TimelineContent>
-        </TimelineItem>
-
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0", color: "text.primary" }}
-            variant="body2"
-          >
-            <motion.div
-              initial="hidden"
-              animate={controls}
-              variants={createVariants("left")}
-              transition={{ duration: 0.5 }}
-            >
-              September 2019 - Present
-            </motion.div>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector sx={{ bgcolor: "black" }} />
-            <TimelineDot sx={{ bgcolor: "black" }}>
               <motion.div
                 initial="hidden"
                 animate={controls}
                 variants={createVariants("right")}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                transition={{ duration: 0.5 }}
               >
-                <FaCodeBranch color="white" />
+                Jan 2020
               </motion.div>
-            </TimelineDot>
-            <TimelineConnector sx={{ bgcolor: "black" }} />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }}>
-            <motion.div
-              initial="hidden"
-              animate={controls}
-              variants={createVariants("right")}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <Typography variant="h6" component="span" color="text.primary">
-                Software Engineering Work
-              </Typography>
-              <Typography color="text.secondary">
-                Worked at Apator Telemetria, Carrier, Volvo, and BMW,
-                contributing to various software and embedded systems projects.
-              </Typography>
-              <div className="flex flex-wrap justify-around items-center mt-2">
-                <Image
-                  src={ApatorLogo}
-                  alt="Apator"
-                  className="h-14 w-auto"
-                  style={{ marginBottom: "-0.5em" }}
-                />
-                <Image src={CarrierLogo} alt="Carrier" className="h-6 w-auto" />
-                <Image src={VolvoLogo} alt="Volvo" className="h-6 w-auto" />
-                <Image src={BMWLogo} alt="BMW" className="h-6 w-auto" />
-              </div>
-            </motion.div>
-          </TimelineContent>
-        </TimelineItem>
-
-        <TimelineItem>
-          <TimelineOppositeContent
-            sx={{ m: "auto 0", color: "text.primary" }}
-            variant="body2"
-          >
-            <motion.div
-              initial="hidden"
-              animate={controls}
-              variants={createVariants("right")}
-              transition={{ duration: 0.5 }}
-            >
-              Dec 2023 - Present
-            </motion.div>
-          </TimelineOppositeContent>
-          <TimelineSeparator>
-            <TimelineConnector sx={{ bgcolor: "black" }} />
-            <TimelineDot sx={{ bgcolor: "white", border: "2px solid black" }}>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineConnector sx={{ bgcolor: "black" }} />
+              <TimelineDot sx={{ bgcolor: "black" }}>
+                <motion.div
+                  initial="hidden"
+                  animate={controls}
+                  variants={createVariants("left")}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                >
+                  <GiRobotGrab color="white" />
+                </motion.div>
+              </TimelineDot>
+              <TimelineConnector sx={{ bgcolor: "black" }} />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: "12px", px: 2 }}>
               <motion.div
                 initial="hidden"
                 animate={controls}
                 variants={createVariants("left")}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
               >
-                <MdFoundation color="black" />
+                <Typography variant="h6" component="span" color="text.primary">
+                  Graduated in Robotics
+                </Typography>
+                <Typography color="text.secondary">
+                  Graduated with a specialization in Robotics and Mechatronics.
+                </Typography>
               </motion.div>
-            </TimelineDot>
-            <TimelineConnector sx={{ bgcolor: "black" }} />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }}>
-            <motion.div
-              initial="hidden"
-              animate={controls}
-              variants={createVariants("left")}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <Typography variant="h6" component="span" color="text.primary">
-                Founding Braincast
-              </Typography>
-              <Typography color="text.secondary">
-                Founded Braincast, leveraging generative AI to enhance the
-                learning experience through duolingo-like learning paths.
-              </Typography>
-            </motion.div>
-          </TimelineContent>
-        </TimelineItem>
+            </TimelineContent>
+          </TimelineItem>
 
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineConnector sx={{ bgcolor: "black" }} />
-            <TimelineDot sx={{ bgcolor: "black" }}>
+          <TimelineItem className="flex-shrink-0 min-w-[350px]">
+            <TimelineOppositeContent
+              sx={{ m: "auto 0", color: "text.primary" }}
+              variant="body2"
+            >
               <motion.div
                 initial="hidden"
                 animate={controls}
                 variants={createVariants("left")}
-                transition={{ duration: 0.5, delay: 0.1 }}
+                transition={{ duration: 0.5 }}
               >
-                <VscDebugContinue color="white" />
+                September 2019 - Present
               </motion.div>
-            </TimelineDot>
-            <TimelineConnector sx={{ bgcolor: "black" }} />
-          </TimelineSeparator>
-          <TimelineContent sx={{ py: "12px", px: 2 }}>
-            <motion.div
-              initial="hidden"
-              animate={controls}
-              variants={createVariants("left")}
-              transition={{ duration: 0.5, delay: 0.2 }}
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineConnector sx={{ bgcolor: "black" }} />
+              <TimelineDot sx={{ bgcolor: "black" }}>
+                <motion.div
+                  initial="hidden"
+                  animate={controls}
+                  variants={createVariants("right")}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                >
+                  <FaCodeBranch color="white" />
+                </motion.div>
+              </TimelineDot>
+              <TimelineConnector sx={{ bgcolor: "black" }} />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: "12px", px: 2 }}>
+              <motion.div
+                initial="hidden"
+                animate={controls}
+                variants={createVariants("right")}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <Typography variant="h6" component="span" color="text.primary">
+                  Software Engineering Work
+                </Typography>
+                <Typography color="text.secondary">
+                  Worked at Apator Telemetria, Carrier, Volvo, and BMW,
+                  contributing to various software and embedded systems
+                  projects.
+                </Typography>
+                <div className="flex flex-wrap justify-around items-center mt-2">
+                  <Image
+                    src={ApatorLogo}
+                    alt="Apator"
+                    className="h-14 w-auto"
+                    style={{ marginBottom: "-0.5em" }}
+                  />
+                  <Image
+                    src={CarrierLogo}
+                    alt="Carrier"
+                    className="h-6 w-auto"
+                  />
+                  <Image src={VolvoLogo} alt="Volvo" className="h-6 w-auto" />
+                  <Image src={BMWLogo} alt="BMW" className="h-6 w-auto" />
+                </div>
+              </motion.div>
+            </TimelineContent>
+          </TimelineItem>
+
+          <TimelineItem className="flex-shrink-0 min-w-[350px]">
+            <TimelineOppositeContent
+              sx={{ m: "auto 0", color: "text.primary" }}
+              variant="body2"
             >
-              <Typography variant="h6" component="span" color="text.primary">
-                Future challenges
-              </Typography>
-              <Typography color="text.secondary">To be continued.</Typography>
-            </motion.div>
-          </TimelineContent>
-        </TimelineItem>
-      </Timeline>
+              <motion.div
+                initial="hidden"
+                animate={controls}
+                variants={createVariants("right")}
+                transition={{ duration: 0.5 }}
+              >
+                Dec 2023 - Present
+              </motion.div>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineConnector sx={{ bgcolor: "black" }} />
+              <TimelineDot sx={{ bgcolor: "white", border: "2px solid black" }}>
+                <motion.div
+                  initial="hidden"
+                  animate={controls}
+                  variants={createVariants("left")}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                >
+                  <MdFoundation color="black" />
+                </motion.div>
+              </TimelineDot>
+              <TimelineConnector sx={{ bgcolor: "black" }} />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: "12px", px: 2 }}>
+              <motion.div
+                initial="hidden"
+                animate={controls}
+                variants={createVariants("left")}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <Typography variant="h6" component="span" color="text.primary">
+                  Founding Braincast
+                </Typography>
+                <Typography color="text.secondary">
+                  Founded Braincast, leveraging generative AI to enhance the
+                  learning experience through duolingo-like learning paths.
+                </Typography>
+              </motion.div>
+            </TimelineContent>
+          </TimelineItem>
+
+          <TimelineItem className="flex-shrink-0 min-w-[350px]">
+            <TimelineSeparator>
+              <TimelineConnector sx={{ bgcolor: "black" }} />
+              <TimelineDot sx={{ bgcolor: "black" }}>
+                <motion.div
+                  initial="hidden"
+                  animate={controls}
+                  variants={createVariants("left")}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                >
+                  <VscDebugContinue color="white" />
+                </motion.div>
+              </TimelineDot>
+              <TimelineConnector sx={{ bgcolor: "black" }} />
+            </TimelineSeparator>
+            <TimelineContent sx={{ py: "12px", px: 2 }}>
+              <motion.div
+                initial="hidden"
+                animate={controls}
+                variants={createVariants("left")}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <Typography variant="h6" component="span" color="text.primary">
+                  Future challenges
+                </Typography>
+                <Typography color="text.secondary">To be continued.</Typography>
+              </motion.div>
+            </TimelineContent>
+          </TimelineItem>
+        </Timeline>
+      </div>
     </div>
   );
 };

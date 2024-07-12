@@ -40,10 +40,7 @@ export default function Articles() {
               </Link>
             </div>
             <div className="space-y-4">
-              <Link
-                legacyBehavior
-                href="/writing/new-python-release"
-              >
+              <Link legacyBehavior href="/writing/new-python-release">
                 <a className="block text-black hover:text-gray-700 dark:hover:text-gray-300">
                   2. Python 3.12 → 3.13. What is changing in September?
                 </a>
