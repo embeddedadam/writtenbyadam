@@ -69,7 +69,7 @@ const Page: React.FC = () => {
       <hr className="border-gray-400 w-full mb-4" />
       <p className="mb-4">
         These models are directly correlated with ML in text, all sorts of text.
-        Let's unwrap it.
+        Let&apos unwrap it.
       </p>
       <p>
         What if ML would work only on text? How to make it work? Well, the
